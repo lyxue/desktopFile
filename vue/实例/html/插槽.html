@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>父传子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <father>
+            <p slot="p1">这是根节点里引入组件里边的内容</p>
+            <span slot="p2">啊哈哈哈哈</span>
+        </father>
+    </div>
+
+    <template id="father"> 
+        <div>
+            <slot name="p2"></slot>
+            <p>这是组件里边的内容</p>
+            <slot name="p1"></slot>
+        </div>
+    </template>  
+    <script>
+        Vue.component('father',{
+            template:'#father',
+            data(){
+                return{
+                    num:0
+                }
+            },
+            methods:{
+                add(){
+                    this.num=this.num +100;
+                }
+            }
+        })
+        let vm = new Vue({
+            el:"#app"
+        })
+    </script>
+</body>
+</html>

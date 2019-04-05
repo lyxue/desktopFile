@@ -1,0 +1,61 @@
+:<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/vue.js"></script>
+    <style>
+        .blue{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="xinxi" id="input">
+        <button @click="add">点击添加</button>
+        <ul>
+            <li v-for="(item,idx) in list" :key="item.idx" :class="item.statu?'blue':''">
+                {{item.todo}}
+                <button @click='del(idx)'>删除</button>
+                <button v-show="!item.statu" @click="finish(idx)">完成</button>
+                <span v-show="item.statu">已完成</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                list:[{todo:'这是列表一的信息',statu:true},
+                    {todo:'这是列表一的信息',statu:false},
+                    {todo:'这是列表一的信息',statu:false},],
+                xinxi:'',
+                show:true
+            },
+            methods:{
+                add(){
+                    this.list.push({todo:this.xinxi,statu:false});
+                    this.xinxi="";
+                    document.getElementById("input").focus();
+                },
+                del(idx){
+                   this.list.splice(idx,1);
+                },
+                finish(idx){
+                    this.list[idx].statu=true;
+                }
+            }
+        })
+    </script>
+    <!-- 功能：
+        1、显示列表信息
+        2、添加待办事项
+        3、删除事项
+        4、完成事项、背景变色
+        5、tabbar 全部 已完成  未完成
+    -->
+</body>
+</html>

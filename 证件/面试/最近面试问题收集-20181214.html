@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>最近面试问题收集-20181214</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}#write, body { height: auto; }
+#write, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write ol, #write p, #write ul { position: relative; }
+#write, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write, pre { white-space: pre-wrap; }
+.CodeMirror, .md-fences, table { text-align: left; }
+.md-reset, a:active, a:hover { outline: 0px; }
+.md-reset, .md-toc-item a { text-decoration: none; }
+.MathJax_SVG, .md-reset { float: none; direction: ltr; }
+:root { --bg-color:#ffffff; --text-color:#333333; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+a.url { word-break: break-all; }
+.in-text-selection, ::selection { background: rgb(181, 214, 252); text-shadow: none; }
+#write { margin: 0px auto; word-break: normal; word-wrap: break-word; padding-bottom: 70px; overflow-x: visible; }
+.first-line-indent #write p .md-line { text-indent: 0px; }
+.first-line-indent #write li, .first-line-indent #write p, .first-line-indent #write p .md-line:first-child { text-indent: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write > blockquote:first-child, #write > div:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > table:first-child, #write > ul:first-child { margin-top: 30px; }
+#write li > table:first-child { margin-top: -20px; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0px; -webkit-margin-after: 0px; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+#write > figure:first-child { margin-top: 16px; }
+figure { overflow-x: auto; margin: -8px 0px 0px -8px; max-width: calc(100% + 16px); padding: 8px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; }
+.CodeMirror-line, .md-fences { break-inside: avoid; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; margin-right: 4px; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+.md-fences { font-size: 0.9rem; display: block; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; vertical-align: top; background: 0px 0px; text-shadow: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; }
+.md-toc-inner, a img, img a { cursor: pointer; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
+  p { orphans: 4; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { white-space: pre-wrap; margin-top: 0.714em; font-size: 0.7em; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > img:only-child { display: block; margin: auto; }
+.md-line > .md-image:only-child, p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+.mathjax-block:not(:empty)::after, .md-toc-content::after, .md-toc::after { display: none; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.MathJax_SVG, .mathjax-block .MathJax_SVG_Display { text-indent: 0px; max-width: none; max-height: none; min-height: 0px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, tt { font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0px; position: relative; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; min-width: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg, [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media screen and (min-width: 914px) {
+}
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+
+
+
+
+
+ .typora-export p, .typora-export .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a>最近面试问题收集</h1><h3><a name='header-n2' class='md-header-anchor '></a>1.LocalStorage，SessionStorage，Cookie的区别以及使用的场景</h3><figure><table><thead><tr><th>储存方式</th><th>储存大小</th><th>清除</th><th>使用场景</th></tr></thead><tbody><tr><td>cookie</td><td>4K左右</td><td>可以设置失效时间</td><td>判断用户是否登陆过网站，记住密码等</td></tr><tr><td>localStorage</td><td>5M左右</td><td>除非被清除或者卸载浏览器，否则永久保存；</td><td>适合长期保存在本地的数据，比如说夜间模式，主题模式等</td></tr><tr><td>sessionStorage</td><td>5M左右</td><td>仅在当前会话下有效，关闭页面或浏览器后被清除</td><td>网上商城中的购物车，ajax的数据缓存</td></tr></tbody></table></figure><h3><a name='header-n24' class='md-header-anchor '></a>2.this是什么，this的4个指向以及改变this指向的方法</h3><p>this代表函数运行时候，自动生成的一个内部对象，只能在函数内使用。</p><p>this的四种指向：</p><p>a.如果是一般函数,this指向全局对象window;</p><p>b.在严格模式下&quot;use strict&quot;,为undefined.</p><p>c.对象的方法里调用,this指向调用该方法的对象.</p><p>d.构造函数里的this,指向创建出来的实例.</p><p>改变this指向的方式：</p><p>改变this的指向并且执行调用函数</p><p>.call(),  call(thisScope, arg1, arg2, arg3...)</p><p>.apply(), apply(thisScope, [arg1, arg2, arg3...]);两个参数</p><p>而bind 改变this的指向，返回的是函数</p><p>.bind()  bind(thisScope, arg1, arg2, arg3...)</p><h3><a name='header-n49' class='md-header-anchor '></a>3.面向对象</h3><p>​	面向对象的编程是以对象为中心,以消息为驱动,所以程序=对象+消息。</p><p>面向对象的两个特性：继承和封装</p><p>封装就是将一类事物的属性和行为抽象成一个类,使其属性私有化,行为公开化,提高了数据的隐秘性的同时,使代码模块化。这样做使得代码的复用性更高。<br/></p><p>继承则是进一步将一类事物共有的属性和行为抽象成一个父类,而每一个子类是一个特殊的父类--有父类的行为和属性,也有自己特有的行为和属性。这样做扩展了已存在的代码块,进一步提高了代码的复用性。<br/></p><h3><a name='header-n58' class='md-header-anchor '></a>4.原型链</h3><p>​	当访问一个对象的某个属性时，会先从该函数本身属性上找，如果没有找到，则会在他的 _ proto _隐式属性（即构造函数的prototype）上去找，如果还没有找到的话，则就会再去prototyep的 _ proto _ 中去找，这样一层一层向上查找就会形成一个链式结构，就称之为原型链。</p><h3><a name='header-n61' class='md-header-anchor '></a>5.vue的双向绑定的底层原理</h3><p>​	vue.js 则是采用数据劫持结合发布者-订阅者模式的方式，通过<code>Object.defineProperty()</code>来劫持各个属性的<code>setter</code>，<code>getter</code>，在数据变动时发布消息给订阅者，触发相应的监听回调。</p><p>​	1.observer:能够对数据对象的所有属性进行监听，如有变动可拿到最新值并通知订阅者。</p><p>​	2.compile:对每个元素节点的指令进行扫描和解析，根据指令模板替换数据，以及绑定相应的更新函数。</p><p>​	3.watcher:作为连接observer和compile的桥梁，能够订阅并收到每个属性变动的通知，执行指令绑定的相应回调函数，从而更新视图。</p><h3><a name='header-n70' class='md-header-anchor '></a>6.用过哪些ui，哪些是基于vue</h3><figure><table><thead><tr><th>ui框架</th><th>基于</th></tr></thead><tbody><tr><td>vux</td><td>vue</td></tr><tr><td>vonic</td><td>vue</td></tr><tr><td>Muse-ui</td><td>vue</td></tr><tr><td>Mint UI</td><td>vue</td></tr><tr><td>Material-UI</td><td>React</td></tr><tr><td>React Desktop</td><td>React</td></tr><tr><td>Ant-design</td><td>React</td></tr><tr><td>Semantic-UI-React</td><td>React</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><h3><a name='header-n102' class='md-header-anchor '></a>7.DNS解析过程</h3><p>​	DNS是“域名系统”，它所提供的服务是用来将主机名和域名转换为IP地址的工作。</p><p>a.客户机提出域名解析请求,并将该请求发送给本地的域名服务器. 　　</p><p>b.当本地的域名服务器收到请求后,就先查询本地的缓存,如果有该纪录项,则本地的域名服务器就直接把查询的结果返回. 　　</p><p>c.如果本地的缓存中没有该纪录,则本地域名服务器就直接把请求发给根域名服务器,然后根域名服务器再返回给本地域名服务器一个所查询域(根的子域)的主域名服务器的地址. 　　</p><p>d.本地服务器再向上一步返回的域名服务器发送请求,然后接受请求的服务器查询自己的缓存,如果没有该纪录,则返回相关的下级的域名服务器的地址. 　　</p><p>e.重复第四步,直到找到正确的纪录. 　　</p><p>f.本地域名服务器把返回的结果保存到缓存,以备下一次使用,同时还将结果返回给客户机.</p><h3><a name='header-n117' class='md-header-anchor '></a>8.介绍一下React</h3><p>可以根据个人项目介绍，然后说用到什么，首先creat-react-app创建react脚手架，然后react-router配置全局的路由，还有分类页之类的可以利用二级路由实现局部刷新的效果，利用react-redux进行组件的通信等，然后还可以扯组件的通信，父传子用props，子传父可以用redux或者自己封装一个发布订阅模式，利用<span class="MathJax_Preview"></span><span class="MathJax_SVG" id="MathJax-Element-1-Frame" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.386ex" height="2.811ex" viewBox="0 -906.7 1888.4 1210.2" role="img" focusable="false" style="vertical-align: -0.705ex;"><defs><path stroke-width="0" id="E1-MJMATHI-6F" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path><path stroke-width="0" id="E1-MJMATHI-6E" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#E1-MJMATHI-6F" x="0" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#E1-MJMATHI-6E" x="485" y="0"></use><g transform="translate(1085,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">和</text></g></g></svg></span><script type="math/tex" id="MathJax-Element-1">on和</script>emit对进行通信，跨组件通信还可以利用状态提升，再不济也可以用sessionStorage或者localStorage这种，跨组件通信一般都是通过第三方去协助你通信的。</p><h3><a name='header-n120' class='md-header-anchor '></a>9.虚拟Dom及其作用/好处</h3><p>​	虚拟DOM其实就是用JS来模拟DOM结构，把DOM的变化操作放在JS层来做，尽量减少对DOM的操作，然后对比前后两次的虚拟DOM的变化，只重新渲染变化了的部分，而没有变化的部分则不会重新渲染。</p><p>1.避免大量无谓的计算量，解决浏览器性能问题</p><p>2.操作虚拟dom即js对象远快于操作真实dom</p><h3><a name='header-n127' class='md-header-anchor '></a>10.你做了哪些前端优化，页面性能优化</h3><p>1.在一个大的组件中，把所有数据请求回来缓存到sessionStorage和localStorage里面，然后分发到小组件。</p><p>2.精灵图，减少图片请求</p><p>3.尽量引入外部css和外部js，保持页面结构的清晰明了。</p><p>4.加入数据量大的时候可以将数据分组，然后按需加载更多。懒加载，加载更多。</p><p>5.预加载，预加载是在浏览器空闲时候请求可能会用到的页面内容（如图像，样式和脚本）。</p><h3><a name='header-n138' class='md-header-anchor '></a>11.vue在不同机型下如何兼容</h3><p>安卓低版本手机是不支持ES6语法的，还有少部分低版本安卓不支持小部分的ES5语法，因此vue使用的是ES6语法，所以会导致页面渲染问题。</p><p>1、npm 安装</p><p>npm install babel-polyfill</p><p>npm install es6-promise</p><p>2、main.js引入 </p><p>import &#39;babel-polyfill&#39;</p><p>import Es6Promise from &#39;es6-promise&#39;</p><p>require(&#39;es6-promise&#39;).polyfill()</p><p>Es6Promise.polyfill()</p><p>3、更改 webpack.base.conf.js 文件中的入口</p><p>entry: {</p><p>app: [&quot;babel-polyfill&quot;, &quot;./src/main.js&quot;]</p><p>},</p><h3><a name='header-n165' class='md-header-anchor '></a>12.git版本1.0.0的错误如何在2.0.0中修复，目前线上版本是2.0.0（Git如何修复已发布版本的Bug？）</h3><p>1、回退到出 Bug 的版本</p><p>首先，查看出bug版本的详细信息（以0.1.1为例）。</p><p><code>git show v0.1.1</code></p><p>其中 xxxxxxxxxxxxxxxxxxxxxxxxxxx 就是版本发布时的 Commit ID。回退到 v0.1.1：</p><p>此时查看目录，会发现所有源代码都已经回退到了当时的版本。</p><p>2、新建 bugfix 分支</p><p>建好 bugfix 分支后，需要将原来的分支（我这里是 master 分支）前进到最新版本（否则它就一直停留在 v0.1.1 了）。</p><p>此时你会发现，master 分支为当前最新进度，bugfix 分支为出 Bug 的版本。</p><p>3、修改 Bug</p><p>接下来就是切换到 bugfix 分支：</p><p>修改完 Bug 后，正常 git add &amp; git commit 即可，并将 bugfix 分支推送到远程 Git服务器。</p><p>4、重打 Tag</p><p>将改好 Bug 的代码重新打上 v0.1.1 的 tag。这里需要注意的是，默认情况下 git 会给 v0.1.1 附上一个当前的时间戳，从而会出现 v0.1.1 的发布时间比 v0.4.2 晚的情况，GitHub 的 Release 页面则会认为 v0.1.1 是最新的版本。</p><p>因此我们需要自行“伪造”一个提交日期，即为原先 v0.1.1 的提交日期即可：</p><p><code>GIT_COMMITTER_DATE=&quot;2017-10-14 23:27&quot; git tag -f v0.1.1 -m &quot;The V0.1.1 Release&quot;</code></p><p>将修改后的 tag 推送到远程 GitHub（强制更新）：</p><p>5、Merge</p><p>最后需要将 bugfix 分支归并到 master 分支。</p><p>解决冲突、修改完成后正常 git add &amp; git commit 即可。</p><p>6、清理</p><p>后续的一些清理工作即删除临时的 bugfix 分支（本地以及远程）：</p><h3><a name='header-n208' class='md-header-anchor '></a>13.rem的生成原理</h3><h3><a name='header-n209' class='md-header-anchor '></a>14.rem和px的换算</h3><p>1rem等于html根元素设定的font-size的px值，假如我们在css里面设定下面的css。</p><p><code>html{font-size:14px}</code></p><p>那么后面的CSS里面的rem值则是以这个14来换算，例如设定一个div宽度为3rem,高度为2.5rem.则它换算成px为width:42px.height:35px，同理，假如一个设计稿为宽度42px,高度为35px，则换成成rem，则是42/14=3rem，35/14=2.5rem。</p><p>如果css里面没有设定html的font-size，则默认浏览器以1rem=16px来换算。</p><h3><a name='header-n218' class='md-header-anchor '></a>15.vue的路由复制下来到别的地方打开为什么为空值</h3><h3><a name='header-n219' class='md-header-anchor '></a>16.post和get的请求在node中是怎么拿到的</h3><h3><a name='header-n220' class='md-header-anchor '></a>17.在ue如何布局</h3><h3><a name='header-n221' class='md-header-anchor '></a>18.sessionStorage能否实现cookie的效果</h3><h3><a name='header-n222' class='md-header-anchor '></a>19.加载页面，再次重新加载的时候，不用缓存怎么做</h3><h3><a name='header-n223' class='md-header-anchor '></a>20.vue和react的区别</h3><h3><a name='header-n224' class='md-header-anchor '></a>21.引用数据类型和基础书类型的区别</h3><h3><a name='header-n225' class='md-header-anchor '></a>22.浏览器如何解析的</h3><h3><a name='header-n226' class='md-header-anchor '></a>23.es6有哪些新特性</h3><h3><a name='header-n227' class='md-header-anchor '></a>24.html5有哪些新特性</h3><h3><a name='header-n228' class='md-header-anchor '></a>25.hash路由的#怎么去掉</h3><h3><a name='header-n229' class='md-header-anchor '></a>26.vue框架中的@代表什么？</h3><h3><a name='header-n230' class='md-header-anchor '></a>27.ES6中什么和闭包很像？</h3><h3><a name='header-n231' class='md-header-anchor '></a>28.数组去重的方法</h3><h3><a name='header-n232' class='md-header-anchor '></a>29.字符串有哪些方法</h3><h3><a name='header-n233' class='md-header-anchor '></a>30.数组有哪些方法？</h3><h3><a name='header-n234' class='md-header-anchor '></a>31.大组件里面引入了很多小组件，如何使小组件进行异步加载</h3><h3><a name='header-n235' class='md-header-anchor '></a>32.undefined和null区别</h3><h3><a name='header-n236' class='md-header-anchor '></a>33.介绍一下vue</h3><h3><a name='header-n237' class='md-header-anchor '></a>34.介绍以下你的项目</h3><h3><a name='header-n238' class='md-header-anchor '></a>35.闭包的理解以及使用场景</h3><h3><a name='header-n239' class='md-header-anchor '></a>36.jQuery获取兄弟节点</h3><h3><a name='header-n240' class='md-header-anchor '></a>37.link和@import的区别</h3><h3><a name='header-n241' class='md-header-anchor '></a>38.延时加载和异步加载的区别</h3><h3><a name='header-n242' class='md-header-anchor '></a>39.做项目的思路</h3><h3><a name='header-n243' class='md-header-anchor '></a>40.有没有上线部署过</h3><h3><a name='header-n244' class='md-header-anchor '></a>41.如果上线的时候发现白屏了，怎么处理</h3><h3><a name='header-n245' class='md-header-anchor '></a>42.typeof和indexof的区别</h3><h3><a name='header-n246' class='md-header-anchor '></a>43.用过哪些websocket的api</h3><h3><a name='header-n247' class='md-header-anchor '></a>44.vue的组件通信</h3><h3><a name='header-n248' class='md-header-anchor '></a>45.css3新特性以及使用场景</h3><h3><a name='header-n249' class='md-header-anchor '></a>46.你在使用vue的过程中有使用过哪些组件化开发？</h3><h3><a name='header-n250' class='md-header-anchor '></a>47.你在后端的接口什么样的数据结果会开心？</h3><h3><a name='header-n251' class='md-header-anchor '></a>48.cookie使根据什么判断用户登录状态？</h3><h3><a name='header-n252' class='md-header-anchor '></a>49.端对端你了解么？</h3><h3><a name='header-n253' class='md-header-anchor '></a>50.假如项目要上线了，但是后端数据还没有来？</h3><h3><a name='header-n254' class='md-header-anchor '></a>51.a标签的优先级</h3><h3><a name='header-n255' class='md-header-anchor '></a>52.如何用js把一个很大的图片压缩</h3><h3><a name='header-n256' class='md-header-anchor '></a>53.如何监听全局的异常，包括浏览器崩溃，服务器问题等等</h3><h3><a name='header-n257' class='md-header-anchor '></a>54.webpack插件的底层原理你有了解过么？</h3><h3><a name='header-n258' class='md-header-anchor '></a>55.swiper的底层原理？</h3><h3><a name='header-n259' class='md-header-anchor '></a>56.vue如何捕获异常</h3><h3><a name='header-n260' class='md-header-anchor '></a>57.vue如何定义全局变量</h3><h3><a name='header-n261' class='md-header-anchor '></a>58.在谷歌和安卓收集上运行正常，但是在ios出现白屏？</h3><h3><a name='header-n262' class='md-header-anchor '></a>59.某一条url请求错误了你如何调试这个问题</h3><h3><a name='header-n263' class='md-header-anchor '></a>60.react一下子返回了一万多条信息，一万多条dom，一下子卡死了，如何解决？</h3><h3><a name='header-n264' class='md-header-anchor '></a>61.查询字符串里面最多的字符</h3><h3><a name='header-n265' class='md-header-anchor '></a>62.前后端分离么？那你们跨域问题怎么解决的？</h3><h3><a name='header-n266' class='md-header-anchor '></a>63.开发流程，比如说你到后期怎么和安卓或者ios交互</h3><h3><a name='header-n267' class='md-header-anchor '></a>64.有没有遇到过在各类型手机上出现样式兼容性问题，比如说哪里高了或者低了，怎么解决的？</h3><h3><a name='header-n268' class='md-header-anchor '></a>65.v-model的实现原理？</h3><h3><a name='header-n269' class='md-header-anchor '></a>66.promise的底层原理？</h3><h3><a name='header-n270' class='md-header-anchor '></a>67.vue的插槽？</h3><h3><a name='header-n271' class='md-header-anchor '></a>68.异步加载组件？</h3><h3><a name='header-n272' class='md-header-anchor '></a>69.怎么预先加载组件？</h3><h3><a name='header-n273' class='md-header-anchor '></a>70.图片的预加载？</h3><h3><a name='header-n274' class='md-header-anchor '></a>71.重新渲染要会用到那几个生命周期？</h3></div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+:<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/vue.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .blue{
+            background: blue;
+        }
+        #app{
+            box-sizing: border-box;
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+        }
+        #app ul{
+            list-style: none;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            margin-bottom: 100px; 
+        }
+        #app ul li{
+            float: left;
+            box-sizing: border-box;
+            width:98px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+        #app div{
+            width: 300px;
+            height: 196px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li 
+            v-for="(item,idx) in list"
+            :key="idx"
+            @click="toggle(item.tag)"
+            :class='sel===item.tag?"blue":""'
+            >{{item.name}}</li>
+        </ul>
+        <div
+        v-for="(item,idx) in list"
+        :key="idx"
+        v-show="sel===item.tag"
+        :class='sel===item.tag?"blue":""'
+        >{{item.nr}}</div>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                list:[{tag:'nav1',name:"选项一",nr:'选项一的内容'},
+                    {tag:'nav2',name:"选项二",nr:'选项二的内容'},
+                    {tag:'nav3',name:"选项三",nr:'选项三的内容'}],
+                sel:"nav1"
+            },
+            methods:{
+                toggle(idx){
+                    this.sel=idx
+                }
+            }
+        })
+    </script>
+</body>
+</html>
